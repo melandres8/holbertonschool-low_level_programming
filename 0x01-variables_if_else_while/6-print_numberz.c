@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Numbers
+ * main - Numberz
  * Return: Always 0 (Success)
  **/
 int main(void)
@@ -9,7 +9,7 @@ int main(void)
 
 	while (num <= 9)
 	{
-		printf("%d", num);
+		putchar(num);
 		num++;
 	}
 	putchar('\n');
