@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Printing combinations #5
+ * main - Printing combinations 5
  * Return: Always 0 (Success)
  **/
 int main(void)
@@ -16,7 +16,7 @@ int main(void)
 		{
 			for (m = n; m <= '9'; m++)
 			{
-				for (e = u + 1 ; e <= '9'; e++)
+				for (e = u + 1 ; e <= 57; e++)
 				{
 					putchar(n);
 					putchar(u);
