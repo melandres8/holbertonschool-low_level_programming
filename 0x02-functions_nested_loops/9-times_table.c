@@ -1,15 +1,13 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * times_table - Print table
  * Return: nothing
  **/
 void times_table(void)
 {
-	int columna = 0;
-	int fila;
-	int multi;
-	int ncol, nfila;
+	int columna, fila, nfila, multi, ncol;
+
+	columna = 0;
 
 	while (columna <= 9)
 	{
@@ -26,8 +24,15 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
-				_putchar(nfila + '0');
+				if (fila >= 1)
+				{
+					_putchar(' ');
+					_putchar(nfila + '0');
+				}
+				else
+				{
+					_putchar(nfila + '0');
+				}
 			}
 			if (fila != 9)
 			{
