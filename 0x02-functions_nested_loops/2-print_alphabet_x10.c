@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  * print_alphabet_x10 - Print 10 the alphabet
