@@ -6,9 +6,9 @@
  **/
 int _isupper(int c)
 {
-	if (c == 'A')
+	if (c >= 'A' && c <= 'Z')
 	{
-		return (2);
+		return (1);
 	}
 	else
 	{
