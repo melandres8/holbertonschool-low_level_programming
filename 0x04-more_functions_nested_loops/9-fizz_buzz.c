@@ -16,10 +16,13 @@ int main(void)
 
 		if (counter % 5 == 0)
 		{
-			printf("Buzz");
 			if (counter != 100)
 			{
-				printf(" ");
+				printf("Buzz ");
+			}
+			else
+			{
+				printf("Buzz");
 			}
 		}
 
