@@ -9,12 +9,12 @@ int main(void)
 
 	for (counter = 1; counter <= 100; counter++)
 	{
-		if ((counter % 3 == 0) && (counter % 5 == 0))
+		if (counter % 3 == 0 && counter % 5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
 
-		if (counter % 5 == 0)
+		else if (counter % 5 == 0 && 3 != 0)
 		{
 			if (counter != 100)
 			{
@@ -26,11 +26,11 @@ int main(void)
 			}
 		}
 
-		if (counter % 3 == 0)
+		else if (counter % 3 == 0 && 5 != 0)
 		{
 			printf("Fizz ");
 		}
-		if (!(counter % 3 == 0) && !(counter % 5 == 0))
+		else
 		{
 			printf("%d ", counter);
 		}
