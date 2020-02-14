@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *
- *
+ * main - Prime factors
+ * Return: 0
  **/
 int main(void)
 {
