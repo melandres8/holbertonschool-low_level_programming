@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- *
- *
+ * rev_string - Reverse a word
+ * @s: Contain a string
  **/
 void rev_string(char *s)
 {
