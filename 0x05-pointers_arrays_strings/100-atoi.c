@@ -10,7 +10,7 @@ int _atoi(char *s)
 	int sign = 1, c;
 	unsigned int num = 0;
 
-	for ( c = 0; s[c] != '\0'; c++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
 		if (s[c] == '-')
 		{
