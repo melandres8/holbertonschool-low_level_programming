@@ -1,9 +1,11 @@
 #include "holberton.h"
 
 /**
- * _strncpy -
- *
- * Return: 
+ * _strncpy - Copy an string and print it
+ * @dest: Variable destination
+ * @src: Variable that contain a original string
+ * @n: Random number
+ * Return: Dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
