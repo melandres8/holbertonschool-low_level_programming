@@ -7,18 +7,18 @@
  **/
 int _atoi(char *s)
 {
-	int sign = 1, counter;
+	int sign = 1, c;
 	unsigned int num = 0;
 
-	for ( counter = 0; s[counter] != '\0'; counter++)
+	for ( c = 0; s[c] != '\0'; c++)
 	{
-		if (*s == '-')
+		if (s[c] == '-')
 		{
-			sign = sign * -1;
+			sign *= -1;
 		}
-		else if (*s >= '0' && *s <= '9')
+		else if (s[c] >= '0' && s[c] <= '9')
 		{
-			num = (num * 10) + (*s - '0');
+			num = (num * 10) + (s[c] - '0');
 		}
 		else if (num > 0)
 		{
