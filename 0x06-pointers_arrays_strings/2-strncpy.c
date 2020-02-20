@@ -1,0 +1,27 @@
+#include "holberton.h"
+
+/**
+ * _strncpy -
+ *
+ * Return: 
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int counter = 0;
+
+	while (src[counter] != '\0')
+	{
+		if (counter < n)
+		{
+			dest[counter] = src[counter];
+		}
+		counter++;
+	}
+	if (dest[counter] < n)
+	{
+		dest[counter] = '\0';
+	}
+	src = '\0';
+
+	return (dest);
+}
