@@ -7,10 +7,10 @@
  **/
 int _atoi(char *s)
 {
-	int sign = 1;
+	int sign = 1, counter;
 	unsigned int num = 0;
 
-	while (*s++)
+	while (s[counter] != '\0')
 	{
 		if (*s == '-')
 		{
@@ -24,6 +24,7 @@ int _atoi(char *s)
 		{
 			break;
 		}
+		counter++;
 	}
 	return (num * sign);
 }
