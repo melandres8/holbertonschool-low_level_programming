@@ -10,13 +10,13 @@ int _atoi(char *s)
 	int sign = 1, counter;
 	unsigned int num = 0;
 
-	while (s[counter] != '\0')
+	for ( counter = 0; s[counter] != '\0'; counter++)
 	{
 		if (*s == '-')
 		{
 			sign = sign * -1;
 		}
-		else if (*s >= 0 && *s <= 9)
+		else if (*s >= '0' && *s <= '9')
 		{
 			num = (num * 10) + (*s - '0');
 		}
@@ -24,7 +24,6 @@ int _atoi(char *s)
 		{
 			break;
 		}
-		counter++;
 	}
 	return (num * sign);
 }
