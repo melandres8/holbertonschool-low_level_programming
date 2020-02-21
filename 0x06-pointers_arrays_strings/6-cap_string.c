@@ -19,7 +19,7 @@ char *cap_string(char *s)
 		{
 			s[i + 1] = s[i + 1] - 32;
 		}
-		else if ((s[i] == ';') && s[i + 1] >= 'a' && s[i + 1] <= 'z')
+		else if ((s[i] == '\t') && s[i + 1] >= 'a' && s[i + 1] <= 'z')
 		{
 			s[i + 1] = s[i + 1] - 32;
 		}
