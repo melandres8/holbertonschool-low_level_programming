@@ -9,6 +9,7 @@ char *leet(char *s)
 	int i, c, z;
 	char alph[] = "oOlLeEaAtT";
 	char rep[] = "0011334477";
+
 	i = 0;
 	while (s[i] != '\0')
 	{
