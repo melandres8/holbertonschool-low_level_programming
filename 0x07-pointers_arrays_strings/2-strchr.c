@@ -8,12 +8,18 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
+	int i, n;
 
 	i = 0;
-	while (s[i] != '\0')
+	n = 0;
+	while (s[n] != '\0')
 	{
-		if (s[i] == c && s[i] != '\0')
+		n++;
+	}
+	n++;
+	while (i <= n)
+	{
+		if (s[i] == c)
 		{
 			return (s + i);
 		}
