@@ -3,22 +3,22 @@ int prime(int n, int i);
 
 /**
  * prime - Prime number calculator
- * @n:
- * @i:
- * Return: 
+ * @n: Number
+ * @i: Divisor
+ * Return: 1 if n is prime or 0 if not
  */
 int prime(int n, int i)
 {
 	if (n <= 2)
 	{
-			if (n == 2)
-			{
-				return (1);
-			}
-			else
-			{
-				return (0);
-			}	
+		if (n == 2)
+		{
+			return (1);
+		}
+		else
+		{
+			return (0);
+		}
 	}
 	else if (n % i == 0)
 	{
@@ -32,7 +32,7 @@ int prime(int n, int i)
 }
 
 /**
- * is_prime_number - Returns 1 if the input integer is a prime number, otherwise return 0.
+ * is_prime_number - Returns 1 if the input integer is a prime number if not 0.
  * @n: Number
  * Return: An integer
  */
