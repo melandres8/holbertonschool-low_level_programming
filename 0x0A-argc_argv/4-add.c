@@ -10,7 +10,7 @@ int _isdigit(char *c);
 int _isdigit(char *c)
 {
 	int counter;
-	
+
 	for (counter = 0; c[counter] != '\0'; counter++)
 	{
 		if (isdigit(c[counter]) == 0)
