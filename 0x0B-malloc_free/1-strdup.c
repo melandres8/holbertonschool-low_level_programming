@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * _strlen - Calculate the value of a string
@@ -27,24 +26,22 @@ char *_strdup(char *str)
 	int size, i;
 	char *dest;
 
-	size = _strlen(str);	/* Get the size of str */
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	dest = (char *) malloc(sizeof(str) * size + 1);
 
-	if (dest != NULL)
-	{
-		for (i = 0; i < size; i++)
-		{
-			dest[i] = str[i];
-		}
-		dest[i] = '\0';
-	}
-	else
+	size = _strlen(str);	/* Get the size of str */
+	dest = malloc(sizeof(char) * (size + 1));
+
+	if (dest == NULL)
 	{
 		return (NULL);
 	}
+	for (i = 0; i < size; i++)
+	{
+		dest[i] = str[i];
+	}
+	dest[i] = '\0';
 	return (dest);
 }
