@@ -27,7 +27,7 @@ char *_strdup(char *str)
 	int size, i;
 	char *dest;
 
-	size = _strlen(str);
+	size = _strlen(str);	/* Get the size of str */
 	if (str == NULL)
 	{
 		return (NULL);
@@ -40,6 +40,7 @@ char *_strdup(char *str)
 		{
 			dest[i] = str[i];
 		}
+		dest[i] = '\0';
 	}
 	else
 	{
