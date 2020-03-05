@@ -37,23 +37,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 
+	if (n < len2)
+	{
+		len2 = n;
+	}
 	new = malloc(sizeof(char) * (len1 + len2));
 
 	if (new == NULL)
 	{
 		return (NULL);
 	}
-	if (n < len2)
-	{
-		len2 = n;
-	}
-	while (*s1 != '\0')
+
+	while (*s1)
 	{
 		new[count] = *s1;
 		count++;
 		s1++;
 	}
-	while (*s2 != '\0')
+	while (*s2)
 	{
 		new[count] = *s2;
 		count++;
