@@ -18,10 +18,10 @@ int _strlen(char *s)
 
 /**
  * string_nconcat - Concatenate two string.
- * @s1:
- * @s2:
- * @n:
- * Return: 
+ * @s1: String 1
+ * @s2: String 2
+ * @n: Number of bytes
+ * Return: New
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
