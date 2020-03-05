@@ -1,63 +1,45 @@
 #include "holberton.h"
-
+#include <string.h>
 /**
- * _strlen - Calculate the value of a string
- * @s: Pointer to a char
- * Return: the value
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; *s != '\0'; s++)
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
- * string_nconcat - Concatenate two string.
- * @s1: String 1
- * @s2: String 2
- * @n: Number of bytes
- * Return: New
+ * string_nconcat - string_nconcat
+ * @s1: s1
+ * @s2: s2
+ * @n: n
+ * Return: c
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1, len2, count = 0;
-	char *new;
+	unsigned int longs1 = 0, longs2 = 0, i, r = 0;
+	char *c;
+	char *e = "";
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		s1 = s2 = "";
-	}
+	if (s1 == NULL)
+		s1 = e;
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	if (s2 == NULL)
+		s2 = e;
 
-	new = malloc(sizeof(char) * (len1 + len2));
+	for (i = 0; s1[i] != '\0'; i++)
+		longs1 += 1;
 
-	if (new == NULL)
-	{
+	for (i = 0; s2[i] != '\0'; i++)
+		longs2 += 1;
+
+	if (n < longs2)
+		longs2 = n;
+
+	c = malloc(longs1 + longs2 + 1);
+
+	if (c == NULL)
 		return (NULL);
-	}
-	if (n < len2)
-	{
-		len2 = n;
-	}
-	while (*s1)
-	{
-		new[count] = *s1;
-		count++;
-		s1++;
-	}
-	while (*s2)
-	{
-		new[count] = *s2;
-		count++;
-		s2++;
-	}
-	new[len1 + len2] = '\0';
-	return (new);
+
+	for (i = 0; s1[i] != '\0'; i++, r++)
+		c[i] = s1[i];
+
+	for (i = 0; i < longs2; i++, r++)
+		c[r] = s2[i];
+
+	c[r] = '\0';
+
+	return (c);
 }
