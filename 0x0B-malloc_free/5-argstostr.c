@@ -28,11 +28,11 @@ char *argstostr(int ac, char **av)
 	count++;
 
 	ptr = malloc(sizeof(int) * count);
+
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
