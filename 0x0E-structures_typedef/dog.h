@@ -1,5 +1,6 @@
 #ifndef DOG
 #define DOG
+#include <stdio.h>
 
 /**
  * struct dog_t - Data of dog.
