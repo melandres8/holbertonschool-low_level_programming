@@ -4,23 +4,22 @@
 char *_strcpy(char *dest, char *src);
 
 /**
-* _strcpy - function that copies a string
-* @dest: pointer of destination
-* @src: string to copy
-* Return: the pointer to dest
+* _strcpy - Copies a strings.
+* @dest: Destination pointer
+* @src: String source
+* Return: Dest pointer
 **/
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int counter;
 
-	i = 0;
-	while (src[i] != '\0')
+	for (counter = 0; src[counter] != '\0'; counter++)
 	{
-		dest[i] = src[i];
-		i++;
+		dest[counter] = src[counter];
 	}
-	dest[i] = src[i];
+	dest[counter] = '\0';
+
 	return (dest);
 }
 
@@ -29,41 +28,41 @@ char *_strcpy(char *dest, char *src)
 * @name: new name
 * @age: new age
 * @owner: new owner
-* Return: instance
+* Return: It depends
 **/
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i = 0, j = 0;
-	char *name_storage;
-	char *owner_storage;
+	char *name_s;
+	char *owner_s;
 	dog_t *doggo;
 
 	while (name[i])
 		i++;
 	while (owner[j])
 		j++;
-	name_storage =  malloc(i + 1);
-	if (!name_storage)
+	name_s =  malloc(i + 1);
+	if (!name_s)
 		return (NULL);
-	owner_storage = malloc(j + 1);
-	if (!owner_storage)
+	owner_s = malloc(j + 1);
+	if (!owner_s)
 	{
-		free(name_storage);
+		free(name_s);
 		return (NULL);
 	}
 	doggo = malloc(sizeof(dog_t));
 	if (!doggo)
 	{
-		free(name_storage);
-		free(owner_storage);
+		free(name_s);
+		free(owner_s);
 		return (NULL);
 	}
-	_strcpy(name_storage, name);
-	_strcpy(owner_storage, owner);
+	_strcpy(name_s, name);
+	_strcpy(owner_s, owner);
 
-	doggo->name = name_storage;
+	doggo->name = name_s;
 	doggo->age = age;
-	doggo->owner = owner_storage;
+	doggo->owner = owner_s;
 
 	return (doggo);
 }
