@@ -1,5 +1,6 @@
 #include "3-calc.h"
-#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - Entry point.
@@ -10,26 +11,26 @@
 int main(int argc, char **argv)
 {
 	int (*func_ptr)(int, int);
+	int num1, num2;
 
-	if (argc != 4)
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+
+	if (argc == 4)
+	{
+		func_ptr = get_op_func(argv[2]);
+		if (func_ptr == NULL)
+		{
+			printf("Error\n");
+			exit(99);
+
+		}
+		printf("%d\n", func_ptr(num1, num2));
+	}
+	else
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if ((*argv[3] == '0') && (strcmp(argv[2], "/") == 0 ||
-		strcmp(argv[2], "%") == 0))
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	if (strcmp(argv[2], "*") && strcmp(argv[2], "/")
-		&& strcmp(argv[2], "-") && strcmp(argv[2], "+")
-		&& strcmp(argv[2], "%"))
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	func_ptr = get_op_func(argv[2]);
-	printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
+	return (0);
 }
