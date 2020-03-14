@@ -34,12 +34,12 @@ void fun_float(va_list flt)
 void fun_str(va_list str)
 {
 	char *string;
-	
+
 	string = va_arg(str, char *);
 
 	if (string == NULL)
 	{
-		printf("(nil)");
+		string = "(nil)";
 	}
 	printf("%s", string);
 }
