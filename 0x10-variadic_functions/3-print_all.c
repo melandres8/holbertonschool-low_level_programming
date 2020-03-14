@@ -1,23 +1,40 @@
 #include "variadic_functions.h"
 
+/**
+ * fun_char - Validate char.
+ * @chr: Char argument.
+ */
 void fun_char(va_list chr)
 {
 	printf("%c", va_arg(chr, int));
 }
 
+/**
+ * fun_int - Integer validate.
+ * @integer: Integer argument
+ */
 void fun_int(va_list integer)
 {
 	printf("%i", va_arg(integer, int));
 }
 
+/**
+ * fun_float - Float validation.
+ * @flt: Float arguments.
+ */
 void fun_float(va_list flt)
 {
 	printf("%f", va_arg(flt, double));
 }
 
+/**
+ * fun_str - String validation.
+ * @str: String arguments.
+ */
 void fun_str(va_list str)
 {
 	char *string;
+
 	string = va_arg(str, char *);
 
 	if (str == NULL)
