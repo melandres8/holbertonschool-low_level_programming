@@ -5,10 +5,15 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * struct va - Variadic global structure.
+ * @va: Struct.
+ * @f: Function.
+ */
 typedef struct va
 {
 	char *va;
-	void (*f)();
+	void (*f)(va_list);
 } va_f;
 
 
