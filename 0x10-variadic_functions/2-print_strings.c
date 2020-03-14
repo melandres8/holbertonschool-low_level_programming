@@ -17,16 +17,19 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(list, char *);
-		printf("%s", str);
-
-		comma = i + 1;
-		if (separator != NULL && n != comma)
-		{
-			printf("%s", separator);
-		}
 		if (str == NULL)
 		{
-			printf("(nil)");
+			str = "(nil)";
+		}
+		else
+		{
+			printf("%s", str);
+		}
+
+		comma = i + 1;
+		if (separator && n != comma)
+		{
+			printf("%s", separator);
 		}
 	}
 
