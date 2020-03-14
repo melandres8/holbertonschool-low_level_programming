@@ -34,10 +34,10 @@ void fun_float(va_list flt)
 void fun_str(va_list str)
 {
 	char *string;
-
+	
 	string = va_arg(str, char *);
 
-	if (str == NULL)
+	if (string == NULL)
 	{
 		printf("(nil)");
 	}
@@ -66,7 +66,7 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 
 	i = 0;
-	while (format[i] != '\0' && format)
+	while (format[i] != '\0' && format != NULL)
 	{
 		j = 0;
 		while (j < 4)
