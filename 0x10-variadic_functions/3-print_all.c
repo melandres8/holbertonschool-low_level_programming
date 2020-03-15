@@ -59,14 +59,14 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_list list;
 	int i, j;
 	char *comma = "";
+	va_list list;
 
 	va_start(list, format);
 
 	i = 0;
-	while (format[i] != '\0' && format != NULL)
+	while (format[i] && format)
 	{
 		j = 0;
 		while (j < 4)
