@@ -13,7 +13,7 @@
 typedef struct va
 {
 	char *va;
-	void (*f)(va_list);
+	void (*f)();
 } va_f;
 
 
