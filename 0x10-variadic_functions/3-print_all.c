@@ -51,10 +51,6 @@ void fun_str(va_list str)
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	unsigned int i, j;
-	char *comma = "";
-
 	va_f form[] = {
 		{"c", fun_char},
 		{"i", fun_int},
@@ -62,6 +58,10 @@ void print_all(const char * const format, ...)
 		{"s", fun_str},
 		{NULL, NULL}
 	};
+
+	va_list list;
+	int i, j;
+	char *comma = "";
 
 	va_start(list, format);
 
