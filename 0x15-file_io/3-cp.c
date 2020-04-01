@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	o_file2 = open(argv[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
 	if (o_file2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 
 	while (r_file1 == 1024)
@@ -37,13 +37,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	if (w_file2 == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 
-	if (close(o_file1) == -1)
+	int c_file1 = close(o_file1), c_file2 = close(o_file2);
+
+	if (c_file1 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_file1);
 		exit(100);
-	if (close(o_file2) == -1)
+	if (c_file2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_file2);
 		exit(100);
 
