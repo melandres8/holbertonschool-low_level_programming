@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int o_file1, o_file2, r_file1 = 1024, w_file2;
+	int o_file1, o_file2, r_file1, w_file2;
 	char buffer[1024];
 
 	if (argc != 3)
