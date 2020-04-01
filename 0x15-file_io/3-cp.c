@@ -40,12 +40,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 		exit(99);
 
-	int c_file1 = close(o_file1), c_file2 = close(o_file2);
-
-	if (c_file1 == -1)
+	if (close(o_file1) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_file1);
 		exit(100);
-	if (c_file2 == -1)
+	if (close(o_file2) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", o_file2);
 		exit(100);
 
