@@ -1,2 +1,2 @@
-compiler:	#prerequisites
+all:	#prerequisites
 	gcc main.c holberton.c -o holberton	# recipe
