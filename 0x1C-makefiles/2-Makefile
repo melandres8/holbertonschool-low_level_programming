@@ -1,6 +1,6 @@
 CC = gcc	# Compiler to use
-SRC = holberton.c main.c	# Sources files
-OBJ = main.o holberton.o	# Objects files
+SRC = main.c holberton.c	# Sources files
+OBJ = ${SRC:.c=.o}	# Objects files
 NAME = holberton	# Executable name
 all: ${OBJ}	# Prerequisites
 	${CC} ${OBJ} -o ${NAME}	# Recipes
