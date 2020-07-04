@@ -1,4 +1,4 @@
 CC = gcc	# compiler
-SRS = holberton.c main.c	# file sources
+SRC = holberton.c main.c	# file sources
 all:	# prerequisites
-	${CC}${SRS} -o holberton	# Recipes
+	${CC} ${SRC} -o holberton	# Recipes
