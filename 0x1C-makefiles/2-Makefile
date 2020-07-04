@@ -2,5 +2,5 @@ CC = gcc	# Compiler to use
 SRC = holberton.c main.c	# Sources files
 OBJ = main.o holberton.o	# Objects files
 NAME = holberton	# Executable name
-all:	# Prerequisites
-	${CC} ${SRC} ${OBJ} ${NAME}	# Recipes
+all: ${OBJ}	# Prerequisites
+	${CC} ${OBJ} -o ${NAME}	# Recipes
